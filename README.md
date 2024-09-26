@@ -38,25 +38,25 @@ Mova o diretório descompactado para /opt:
 
 `sudo mv spark-3.4.1-bin-hadoop3 /opt/spark`
 
-4. Subir o Serviço Master
+* 4. Subir o Serviço Master
 Inicie o serviço master do Spark:
 
 `/opt/spark/sbin/start-master.sh`
 
-5. Subir o Serviço Worker
+* 5. Subir o Serviço Worker
 Inicie o serviço worker do Spark:
 
 `opt/spark/sbin/start-worker.sh spark://localhost:7077`
 
-6. Criar Diretório do Projeto
+* 6. Criar Diretório do Projeto
 Crie um diretório para o projeto:
 
 `mkdir projeto_quarta`
 
-7. Criar o Script mapreduce.py
+* 7. Criar o Script mapreduce.py
 Crie o script mapreduce.py no diretório projeto_quarta com o seguinte conteúdo:
 
-`Python
+#Python
 
 -*- coding: utf-8 -*-
 import sys
