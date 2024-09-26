@@ -56,8 +56,11 @@ Crie um diretório para o projeto:
 * 7. Criar o Script mapreduce.py
 Crie o script mapreduce.py no diretório projeto_quarta com o seguinte conteúdo:
 
+```
 #Python
+```
 
+```
 -*- coding: utf-8 -*-
 import sys
 from pyspark import SparkContext, SparkConf
@@ -96,6 +99,7 @@ df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", h
 
 9. Encerrar a SparkSession
 spark.stop()`
+```
 
 * 8. Submeter o Script no Spark
 Execute o script mapreduce.py utilizando o comando spark-submit:
