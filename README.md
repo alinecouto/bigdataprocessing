@@ -31,17 +31,17 @@ Baixe o pacote do Apache Spark usando o comando wget:
 2. Descompactar o Pacote
 Descompacte o arquivo baixado:
 
-> tar -xvf spark-3.4.1-bin-hadoop3.tgz
+`tar -xvf spark-3.4.1-bin-hadoop3.tgz`
 
 3. Mover o Arquivo para o Diretório /opt
 Mova o diretório descompactado para /opt:
 
-sudo mv spark-3.4.1-bin-hadoop3 /opt/spark
+`sudo mv spark-3.4.1-bin-hadoop3 /opt/spark`
 
 4. Subir o Serviço Master
 Inicie o serviço master do Spark:
 
-/opt/spark/sbin/start-master.sh
+`/opt/spark/sbin/start-master.sh`
 
 5. Subir o Serviço Worker
 Inicie o serviço worker do Spark:
