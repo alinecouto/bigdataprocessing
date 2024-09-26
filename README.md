@@ -46,17 +46,17 @@ Inicie o serviço master do Spark:
 5. Subir o Serviço Worker
 Inicie o serviço worker do Spark:
 
-/opt/spark/sbin/start-worker.sh spark://localhost:7077
+`opt/spark/sbin/start-worker.sh spark://localhost:7077`
 
 6. Criar Diretório do Projeto
 Crie um diretório para o projeto:
 
-mkdir projeto_quarta
+`mkdir projeto_quarta`
 
 7. Criar o Script mapreduce.py
 Crie o script mapreduce.py no diretório projeto_quarta com o seguinte conteúdo:
 
-Python
+`Python
 
 # -*- coding: utf-8 -*-
 import sys
@@ -65,39 +65,40 @@ from pyspark.sql import SQLContext
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 
-master_url = "spark://renato-Latitude-5400:7077"
+master_url = "spark://renato-Latitude-5400:7077"`
 
-# 1. Criar uma SparkSession
-spark = SparkSession.builder \
+1. Criar uma SparkSession
+`spark = SparkSession.builder \
     .appName("MapReduceNumerosCSV") \
     .master(master_url) \
-    .getOrCreate()
+    .getOrCreate()`
 
-# 2. Carregar o arquivo CSV em um DataFrame
-df = spark.read.csv("/home/renato/Downloads/projeto_quarta/dataset.csv", header=True, inferSchema=True)
+2. Carregar o arquivo CSV em um DataFrame
+df = spark.read.csv("/home/renato/Downloads/projeto_quarta/dataset.csv", header=True, inferSchema=True)`
 
-# 3. Remover valores NaN da coluna numérica
-df_clean = df.dropna(subset=["Low"])
+3. Remover valores NaN da coluna numérica
+df_clean = df.dropna(subset=["Low"])`
 
-# 4. Exemplo de operação Map (selecionar a coluna numérica)
-df_map = df_clean.select("Low")
+4. Exemplo de operação Map (selecionar a coluna numérica)
+df_map = df_clean.select("Low")`
 
-# 5. Exemplo de operação Reduce (soma todos os valores da coluna numérica)
-df_reduce = df_map.agg(F.sum("Low").alias("soma_total"))
+5. Exemplo de operação Reduce (soma todos os valores da coluna numérica)
+df_reduce = df_map.agg(F.sum("Low").alias("soma_total"))`
 
-# 6. Exemplo de operação Reduce (calcular a média dos valores da coluna numérica)
-df_reduce = df_map.agg(F.avg("Low").alias("media_total"))
+6. Exemplo de operação Reduce (calcular a média dos valores da coluna numérica)
+df_reduce = df_map.agg(F.avg("Low").alias("media_total"))`
 
-# 7. Mostrar o resultado da soma
-df_reduce.show()
+7. Mostrar o resultado da soma
+df_reduce.show()`
 
-# 8. Guardar a saída em um arquivo CSV
-df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", header=True)
+8. Guardar a saída em um arquivo CSV
+df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", header=True)`
 
-# 9. Encerrar a SparkSession
-spark.stop()
-Código gerado por IA. Reveja e utilize cuidadosamente. Mais informações sobre as FAQ.
-8. Submeter o Script no Spark
+9. Encerrar a SparkSession
+spark.stop()`
+
+
+#8. Submeter o Script no Spark
 Execute o script mapreduce.py utilizando o comando spark-submit:
 
-spark-submit projeto_quarta/mapreduce.py
+`spark-submit projeto_quarta/mapreduce.py`
