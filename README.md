@@ -1,11 +1,9 @@
 # Big Data Processing
 Big Data Processing- Mackenzie
 
-# A first-level heading
 MBA Engenharia de Dados
 
-# A second-level heading
-Grupo:
+# Grupo:
 | Nomes              | RA |
 | -------------     | ------------- |
 | Aline Couto       | 10206399   |
