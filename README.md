@@ -26,7 +26,7 @@ Java instalado (Apache Spark é baseado em Java)
 1. Download do Pacote Spark
 Baixe o pacote do Apache Spark usando o comando wget:
 
-> wget https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz
+`wget https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz`
 
 2. Descompactar o Pacote
 Descompacte o arquivo baixado:
