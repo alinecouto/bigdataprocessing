@@ -12,13 +12,7 @@ Grupo:
 | Alex Assis        | 10444718  |
 | Renato Mori       | 10444622  |
 
-_________________________________________
-Grupo:
-Aline Couto 10206399 
-Cristian Barros 10444616 
-Vinícius Batista 10444150 
-Alex Assis 10444718
-Renato Mori 10444622
+
 
 _________________________________________
 
