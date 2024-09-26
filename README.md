@@ -97,10 +97,24 @@ df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", h
 9. Encerrar a SparkSession
 spark.stop()`
 
-8. Submeter o Script no Spark
+* 8. Submeter o Script no Spark
 Execute o script mapreduce.py utilizando o comando spark-submit:
 
 `spark-submit projeto_quarta/mapreduce.py`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
 
