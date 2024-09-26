@@ -23,17 +23,17 @@ Acesso ao terminal com permissões de superusuário
 Java instalado (Apache Spark é baseado em Java)
 
 # Passo a Passo
-1. Download do Pacote Spark
+* 1. Download do Pacote Spark
 Baixe o pacote do Apache Spark usando o comando wget:
 
 `wget https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz`
 
-2. Descompactar o Pacote
+* 2. Descompactar o Pacote
 Descompacte o arquivo baixado:
 
 `tar -xvf spark-3.4.1-bin-hadoop3.tgz`
 
-3. Mover o Arquivo para o Diretório /opt
+* 3. Mover o Arquivo para o Diretório /opt
 Mova o diretório descompactado para /opt:
 
 `sudo mv spark-3.4.1-bin-hadoop3 /opt/spark`
@@ -97,8 +97,11 @@ df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", h
 9. Encerrar a SparkSession
 spark.stop()`
 
-
-#8. Submeter o Script no Spark
+8. Submeter o Script no Spark
 Execute o script mapreduce.py utilizando o comando spark-submit:
 
 `spark-submit projeto_quarta/mapreduce.py`
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
