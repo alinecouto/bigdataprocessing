@@ -23,44 +23,41 @@ Acesso ao terminal com permissões de superusuário
 Java instalado (Apache Spark é baseado em Java)
 
 # Passo a Passo
-* 1. Download do Pacote Spark
+1. Download do Pacote Spark
 Baixe o pacote do Apache Spark usando o comando wget:
 
 `wget https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz`
 
-* 2. Descompactar o Pacote
+2. Descompactar o Pacote
 Descompacte o arquivo baixado:
 
 `tar -xvf spark-3.4.1-bin-hadoop3.tgz`
 
-* 3. Mover o Arquivo para o Diretório /opt
+3. Mover o Arquivo para o Diretório /opt
 Mova o diretório descompactado para /opt:
 
 `sudo mv spark-3.4.1-bin-hadoop3 /opt/spark`
 
-* 4. Subir o Serviço Master
+4. Subir o Serviço Master
 Inicie o serviço master do Spark:
 
 `/opt/spark/sbin/start-master.sh`
 
-* 5. Subir o Serviço Worker
+5. Subir o Serviço Worker
 Inicie o serviço worker do Spark:
 
 `opt/spark/sbin/start-worker.sh spark://localhost:7077`
 
-* 6. Criar Diretório do Projeto
+6. Criar Diretório do Projeto
 Crie um diretório para o projeto:
 
 `mkdir projeto_quarta`
 
-* 7. Criar o Script mapreduce.py
+7. Criar o Script mapreduce.py
 Crie o script mapreduce.py no diretório projeto_quarta com o seguinte conteúdo:
 
 ```
 #Python
-```
-
-```
 -*- coding: utf-8 -*-
 import sys
 from pyspark import SparkContext, SparkConf
@@ -101,7 +98,7 @@ df_reduce.coalesce(1).write.csv("/home/renato/Downloads/projeto_quarta/saida", h
 spark.stop()`
 ```
 
-* 8. Submeter o Script no Spark
+8. Submeter o Script no Spark
 Execute o script mapreduce.py utilizando o comando spark-submit:
 
 `spark-submit projeto_quarta/mapreduce.py`
