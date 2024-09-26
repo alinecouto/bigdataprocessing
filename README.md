@@ -58,7 +58,7 @@ Crie o script mapreduce.py no diretório projeto_quarta com o seguinte conteúdo
 
 `Python
 
-# -*- coding: utf-8 -*-
+-*- coding: utf-8 -*-
 import sys
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SQLContext
